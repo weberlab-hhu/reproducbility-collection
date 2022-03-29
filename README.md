@@ -115,6 +115,16 @@ e.g. the final command might look something like
 (or navigate to git clone in your software of choice).
 
 ---
+#### Configure git
+
+You can do this now, or latest when prompted to tell git who you are
+
+```
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+```
+
+---
 #### Start tracking your project history
 Congrats, now you have a local copy of your project.
 
@@ -267,30 +277,71 @@ __pycache__/
 - run `git status` again to see the difference
 - add, commit, and push the `.gitignore` file itself
 
+#### git help
+
+`git help`
+
+that and google.
+
+
+## resources
+A very solid introduction (slightly dated, still all functional)
+[here](https://rogerdudler.github.io/git-guide/)
+
+A more extensive look, from basic to advanced features:
+[here](https://gitlab.com/jmass/git_crash_course/-/blob/master/git_crash_course.md)
+
+> Recommendation: keep a demo private play ground repository
+> to just try things out. That said, as long as you have committed
+> and don't _delete the entire repository_ what is deleted can be
+> restored, and what is bricked can be checked and patched,
+> that's the whole point. So try it out and have fun. :-)
 
 ## muscle building (not live tutorial)
 Under construction, until then please check
-out other resources such as: 
-`https://gitlab.com/jmass/git_crash_course/-/blob/master/git_crash_course.md`
-or
-`https://rogerdudler.github.io/git-guide/`
+out e.g. the resources above.
+Or take the brief descriptions, google some, and roll with it.
 
 ### larger projects and collaboration
+
 #### branches
 use branches to work on multiple things simultaneously
 (be it one person keeping a clean "main" branch while
 implementing something in a "feature" branch, or simply
 more than one person working together)
 
-`branch` to make `switch` to change
-`merge` to combine
+`git branch` to make `git switch` to change
+`git merge` to combine.
 
 #### merge conflicts
-An IDE can help, meld (https://meldmerge.org/)
-can help.
+Of course working with multiple instances simulatenously
+can cause pain when you go to bring them back together.
+
+What can not be automatically merged, causes a merge conflict
+An IDE can help, meld (https://meldmerge.org/) can help.
+
+> Note 1: not all that merges automatically is logically
+> correct. Unit and integration tests are tools that can
+> help here, but that is a whole different topic; so short
+> of that, _review_ the differences, and know where you
+> expect problems.
+
+> Note 2: make your life easy by not generating completely
+> avoidable merge conflicts. Commits are free, so code on your workstation
+> with an IDE and `push`, then on the server `pull` and run the code.
 
 ### data storage
-lsf
+- small (tiny) example data -> in repository
+- moderate project linked data -> lfs https://git-lfs.github.com/ 
+- large -> specific repository (e.g. SRA), ARCs?
 
 ### keeping it clean
-`stash`, `squash`, `rebase` & co
+As the project grows, with more people working on it
+and / or using it, it can be more important to use
+git elegantly, and not end up with a convoluted graph
+or a commit for every fixed typo in main. 
+
+`git squash` and `git rebase` can help you here
+
+use `git tag` to mark particular snapshots to be 
+found later (e.g. release versions)

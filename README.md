@@ -114,6 +114,7 @@ e.g. the final command might look something like
 `git clone https://github.com/weberlab-hhu/version-control-intro`
 (or navigate to git clone in your software of choice).
 
+---
 #### Start tracking your project history
 Congrats, now you have a local copy of your project.
 
@@ -151,6 +152,7 @@ favorite paragraph, or from breaking your code in the future and
 not remembering how it used to be. It is not safe from hard drive
 failure, etc.. (yet).
 
+---
 #### Keep synced with the cloud (backup and access anywhere)
 
 - `git push` <- sync your snapshots _to_ the cloud
@@ -168,7 +170,8 @@ changes are there.
 > gone wrong they will probably have ideas on what to do. 
 > When in doubt: if it won't `push`, try to `pull` first
 
-#### access your project history
+---
+#### Access your project history
 
 Alright, no point in keeping a history of everything
 if we don't know how to access it. 
@@ -180,16 +183,114 @@ In the terminal:
 - `git log` or
 - `git log --all --decorate --oneline --graph`
 
+You will want to us the `log` out put to decide _where_ you want to view
+the history, and copy the commit hash (the long chain
+of numbers and letters, e.g. "3aafb46aa6dd4dd3172bb40783967a76a9e401a4")
+
+##### Roll the whole project and all files back
+- `git checkout <hash>`
+
+##### Return the whole project to the latest snapshot
+- `git switch main` <- or branch of choice, if you weren't working on main
+
+##### Bring back just one file from the past
+- `git restore -s <hash> README.md`
+
+##### OK, I saw what I wanted to, now give me back the current version please
+- `git restore -s main README.md`
+
+This gets fancier, but for the start, just know it works. When you have
+'checked out' or 'restored' a file from the past, it is a file like any
+other. You can copy it elsewhere, or copy some text from it, or just view it.
+That's normally enough to give you control, and you dig deeper to make it
+elegant as you go.
+
+---
+### Misc, but helpful
+
+#### ssh keys
+ssh keys are the goto matching lock (public) and key (private) of the
+computer world. They can save a lot of typing passwords, and are practically
+_necessary_ for putting your own work github.com. They can be very simple
+AND they can be very frustrating. 
+
+Github already provides instructions:
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+
+For hhu git.hhu.de, it's the same except, navigate to "user settings"/"SSH Keys" 
+and add it there.
+
+The short version (for linux):
+
+`ssh-keygen`.
+
+> Recommendation: DO NOT change the default location. 
+> If there is already a key there, cancel generation and 
+> use the existing key! Also, DO add a password.
+
+Then navigate to ssh-keys somewhere under your 
+cloud service settings and copy the _public_ (e.g. id_rsa.pub)
+key there.
+
+> Another recommendation: keep it simple for starters,
+> don't try and access multiple different github accounts
+> from the same account on the same computer, until you are
+> comfortable with ssh keys.
+
+#### .gitignore
+You may have noticed other files 'appearing'
+in the working directory (e.g. `.idea`), or you may
+have a coding project with a virtual environment. 
+
+As a rule, any such auto-generated files should neither
+be tracked, nor pushed to remote. It's not just wasting
+space, it can cause trouble for anyone who clones a copy.
+
+But if you want to add everything `git add *` is so convenient,
+if only it wouldn't grab those.
+
+this is where .gitignore comes in. 
+
+- run `git status` to see what isn't tracked, but could be
+
+- Make a file in the base of the repository called .gitignore
+and add the names of any files that _shouldn't_ be tracked.
+The wildcard `*` works here too.
+
+e.g. 
+```commandline
+.idea
+venv*
+__pycache__/
+```
+
+- run `git status` again to see the difference
+- add, commit, and push the `.gitignore` file itself
 
 
-also access (ssh keys)
 ## muscle building (not live tutorial)
+Under construction, until then please check
+out other resources such as: 
+`https://gitlab.com/jmass/git_crash_course/-/blob/master/git_crash_course.md`
+or
+`https://rogerdudler.github.io/git-guide/`
+
 ### larger projects and collaboration
 #### branches
+use branches to work on multiple things simultaneously
+(be it one person keeping a clean "main" branch while
+implementing something in a "feature" branch, or simply
+more than one person working together)
+
+`branch` to make `switch` to change
+`merge` to combine
+
 #### merge conflicts
+An IDE can help, meld (https://meldmerge.org/)
+can help.
 
 ### data storage
 lsf
 
 ### keeping it clean
-stash, squash, rebase & co
+`stash`, `squash`, `rebase` & co

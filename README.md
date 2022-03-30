@@ -17,6 +17,7 @@ A first-timer primer on getting started with git (& github/gitlab).
     - [ssh keys](#ssh-keys)
     - [.gitignore](#gitignore)
     - [git help](#git-help)
+    - [Do's and Don'ts](#dos-and-donts)
 - [resources](#resources)
   - [Cheat sheets](#cheat-sheets)
 - [muscle building (not live tutorial)](#muscle-building-not-live-tutorial)
@@ -43,7 +44,7 @@ cloud repository, i.e. to make your project 'safe'.
 #### make a cloud account
 
 For today, we will use either "git.hhu.de" as our cloud service, because
-we (HHU members) all _have_ an account. Or, if you have or what to setup
+we (HHU members) all _have_ an account. Or, if you have or wnat to setup
 an account briefly, in the "real world" you'll generally want to use a
 cloud service such as "github.com" or "gitlab.com".
 
@@ -339,6 +340,16 @@ __pycache__/
 `git help`
 
 that and google.
+
+#### Do's and Don'ts
+
+| # avoid                   | Do                                | Don't                                                  |
+| ------------------------- | --------------------------------- | ------------------------------------------------------ |
+| mixing projects           | new project = new git             | pile up unrelated code in one repository               |
+| breaking a working project                          | new feature = new branch          | commit directly to the main branch                     |
+| sharing unwanted files    | add a `.gitignore` early          | add secrets or sensitive data                          |
+| loss and friction         | regularly commit + push to remote | hold up work by not committing local changes to remote |
+| confusing commit messages | concise, useful, short            | long, meaningless                                      |
 
 ## resources
 

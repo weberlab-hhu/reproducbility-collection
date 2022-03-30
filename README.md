@@ -2,6 +2,32 @@
 
 A first-timer primer on getting started with git (& github/gitlab).
 
+<!-- toc -->
+- [the core functionality (live tutorial)](#the-core-functionality-live-tutorial)
+  - [first steps](#first-steps)
+    - [make a cloud account](#make-a-cloud-account)
+    - [make a repository](#make-a-repository)
+    - [install git (+)](#install-git-)
+    - [Clone your project (i.e. Download a copy)](#clone-your-project-ie-download-a-copy)
+    - [Configure git](#configure-git)
+    - [Start tracking your project history](#start-tracking-your-project-history)
+    - [Keep synced with the cloud (backup and access anywhere)](#keep-synced-with-the-cloud-backup-and-access-anywhere)
+    - [Access your project history](#access-your-project-history)
+  - [Misc, but helpful](#misc-but-helpful)
+    - [ssh keys](#ssh-keys)
+    - [.gitignore](#gitignore)
+    - [git help](#git-help)
+- [resources](#resources)
+- [muscle building (not live tutorial)](#muscle-building-not-live-tutorial)
+  - [larger projects and collaboration](#larger-projects-and-collaboration)
+    - [branches](#branches)
+    - [merge conflicts](#merge-conflicts)
+  - [data storage](#data-storage)
+  - [keeping it clean](#keeping-it-clean)
+
+<!-- toc -->
+
+
 ## the core functionality (live tutorial)
 
 Git is a very powerful tool, and it can have quite the

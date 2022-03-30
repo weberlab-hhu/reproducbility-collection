@@ -18,6 +18,7 @@ A first-timer primer on getting started with git (& github/gitlab).
     - [.gitignore](#gitignore)
     - [git help](#git-help)
 - [resources](#resources)
+  - [Cheat sheets](#cheat-sheets)
 - [muscle building (not live tutorial)](#muscle-building-not-live-tutorial)
   - [larger projects and collaboration](#larger-projects-and-collaboration)
     - [branches](#branches)
@@ -26,7 +27,6 @@ A first-timer primer on getting started with git (& github/gitlab).
   - [keeping it clean](#keeping-it-clean)
 
 <!-- toc -->
-
 
 ## the core functionality (live tutorial)
 
@@ -353,6 +353,15 @@ A more extensive look, from basic to advanced features:
 > and don't _delete the entire repository_ what is deleted can be
 > restored, and what is bricked can be checked and patched,
 > that's the whole point. So try it out and have fun. :-)
+
+### Cheat sheets
+
+- GitHub:
+  - <https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf>
+  - <https://education.github.com/git-cheat-sheet-education.pdf>
+- GitLab: <https://about.gitlab.com/images/press/git-cheat-sheet.pdf>
+- Hylke Bons: <https://github.com/hbons/git-cheat-sheet>
+  - Bit outdated, but nice (graphical) one-pager overview
 
 ## muscle building (not live tutorial)
 

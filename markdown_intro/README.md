@@ -11,7 +11,6 @@
 - [Real-time collaboration](#real-time-collaboration)
 - [Tutorials and resources](#tutorials-and-resources)
 - [Recommended VS code extensions](#recommended-vs-code-extensions)
-- [Hands-on markdown tutorial](#hands-on-markdown-tutorial)
 
 ## What is Markdown?
 
@@ -91,8 +90,9 @@
 
 Let's try it out with a few examples.
 
--> [Hands-on markdown tutorial](#hands-on-markdown-tutorial) <-
+-> [Hands-on tutorial](./hands_on.md) <-
 
+> Note: This is also to highlight cross-document linking.
 
 ## Is there anything markdown can't do?
 
@@ -142,10 +142,10 @@ The top recommendation: Pandoc![^3][Pandoc]
 **Use pandoc to convert your...**
 
 ```bash
-pandoc README.md -o README.html   # ... markdown to .html
-pandoc README.md -o README.pdf    # ... markdown to .pdf
-pandoc README.md -o README.docx   # ... markdown to .docx
-pandoc -t slidy -s --slide-level=2 --metadata pagetitle=markdown_intro README.md -o markdown_slides.html # ... markdown to html slides
+pandoc README.md -o markdown_intro.html   # ... markdown to .html
+pandoc README.md -o markdown_intro.pdf    # ... markdown to .pdf
+pandoc README.md -o markdown_intro.docx   # ... markdown to .docx
+pandoc -t slidy -s --slide-level=2 --metadata pagetitle=markdown_intro README.md -o markdown_intro_slides.html # ... markdown to html slides
 ```
 
 ## Real-time collaboration
@@ -184,15 +184,12 @@ These support you in
 - [Markdown PDF](https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf)
 - [Markdown all in one](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 
-
 <!-- This is just to show references in markdown -->
 
-[LaTeX]: https://www.latex-project.org/
+[LaTeX]: https://www.latex-project.org/ "This a Link to the LaTeX Webpage"
 
 <!-- This is just to show you a footnote in markdown -->
 
 [^1]: Integrated development environments
 [^2]: I am a footnote
 [^3]: <https://pandoc.org/>
-
-## Hands-on markdown tutorial

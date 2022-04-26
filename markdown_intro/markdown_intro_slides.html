@@ -95,7 +95,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="#real-time-collaboration">Real-time collaboration</a></li>
 <li><a href="#tutorials-and-resources">Tutorials and resources</a></li>
 <li><a href="#recommended-vs-code-extensions">Recommended VS code extensions</a></li>
-<li><a href="#hands-on-markdown-tutorial">Hands-on markdown tutorial</a></li>
 </ul></div><div id="what-is-markdown" class="slide section level2">
 <h1>What is Markdown?</h1>
 <ul>
@@ -145,7 +144,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>no hassle with formatting</li>
 <li>Worry about content, not layout.</li>
-<li>Most benefits of <a href="https://www.latex-project.org/">LaTeX</a>, but simpler</li>
+<li>Most benefits of <a href="https://www.latex-project.org/" title="This a Link to the LaTeX Webpage">LaTeX</a>, but simpler</li>
 </ul></li>
 <li>easy-to-read, easy-to-write
 <ul>
@@ -173,7 +172,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div><div id="hands-on-live-demo" class="slide section level2">
 <h1>Hands-on Live demo</h1>
 <p>Let’s try it out with a few examples.</p>
-<p>-&gt; <a href="#hands-on-markdown-tutorial">Hands-on markdown tutorial</a> &lt;-</p>
+<p>-&gt; <a href="./hands_on.md">Hands-on tutorial</a> &lt;-</p>
+<blockquote>
+<p>Note: This is also to highlight cross-document linking.</p>
+</blockquote>
 </div><div id="is-there-anything-markdown-cant-do" class="slide section level2">
 <h1>Is there anything markdown can’t do?</h1>
 <ul>
@@ -181,7 +183,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Reminder: “WYSIWYG”</li>
 <li>Theming, customization, special formatting, design is hard(ly possible)</li>
-<li>Use a word processor (or <a href="https://www.latex-project.org/">LaTeX</a> ;-) )</li>
+<li>Use a word processor (or <a href="https://www.latex-project.org/" title="This a Link to the LaTeX Webpage">LaTeX</a> ;-) )</li>
 </ul></li>
 <li>Collaboration on documents (e.g. reviewing manuscripts)
 <ul>
@@ -231,10 +233,10 @@ e.g. not every markdown parser understands</p>
 <p>Note: pandoc conversion to pdf depends on a LaTeX Installation on your system. If you run into issues, see <a href="https://pandoc.org/installing.html" class="uri">https://pandoc.org/installing.html</a> for details and recommendations.</p>
 </blockquote>
 <p><strong>Use pandoc to convert your…</strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">pandoc</span> README.md -o README.html   <span class="co"># ... markdown to .html</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="ex">pandoc</span> README.md -o README.pdf    <span class="co"># ... markdown to .pdf</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="ex">pandoc</span> README.md -o README.docx   <span class="co"># ... markdown to .docx</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="ex">pandoc</span> -t slidy -s --slide-level=2 --metadata pagetitle=markdown_intro README.md -o markdown_slides.html <span class="co"># ... markdown to html slides</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">pandoc</span> README.md -o markdown_intro.html   <span class="co"># ... markdown to .html</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="ex">pandoc</span> README.md -o markdown_intro.pdf    <span class="co"># ... markdown to .pdf</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="ex">pandoc</span> README.md -o markdown_intro.docx   <span class="co"># ... markdown to .docx</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="ex">pandoc</span> -t slidy -s --slide-level=2 --metadata pagetitle=markdown_intro README.md -o markdown_intro_slides.html <span class="co"># ... markdown to html slides</span></span></code></pre></div>
 </div><div id="real-time-collaboration" class="slide section level2">
 <h1>Real-time collaboration</h1>
 <p>Although markdown is not perfect for collaboration on documents (e.g. manuscripts), there are occasions where online collaboration in markdown format comes in very handy (meetings with people that understand MD, code-intensive classes, etc.).</p>
@@ -277,8 +279,6 @@ These support you in</p>
 </ul>
 <!-- This is just to show references in markdown -->
 <!-- This is just to show you a footnote in markdown -->
-</div><div id="hands-on-markdown-tutorial" class="slide section level2">
-<h1>Hands-on markdown tutorial</h1>
 </div>
 <div class="footnotes slide">
 <hr />

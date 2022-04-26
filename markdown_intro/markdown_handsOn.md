@@ -1,7 +1,7 @@
 
 # Hands-on markdown tutorial
 
-> mostly (adapted) from <https://daringfireball.net/projects/markdown/dingus> and
+> mostly (adapted) from <https://daringfireball.net/projects/markdown/dingus>
 
 ## Software
 
@@ -106,9 +106,9 @@ Violets are blue.
 ### Images
 
 - Inline (titles are optional):
-![alt text](/path/img.jpg "Title")
+![alt text](../images/github_new.png "This picture is from the git tutorial 4 weeks ago")
 
 - Reference-style:
 ![alt text][id]
 
-[id]: /url/to/img.jpg "Title"
+[id]: https://github.com/weberlab-hhu/version-control-intro/blob/main/images/clone_github.png "This one is also from 4 weeks ago"

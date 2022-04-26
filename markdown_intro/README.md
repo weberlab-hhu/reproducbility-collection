@@ -3,7 +3,7 @@
 
 - [What is Markdown?](#what-is-markdown)
 - [Why Markdown?](#why-markdown)
-- [Hands-on Live demo](#hands-on-live-demo)
+- [Hands-on live demo](#hands-on-live-demo)
 - [Is there anything markdown can't do?](#is-there-anything-markdown-cant-do)
 - [Markdown <> Code & Data Management?](#markdown--code--data-management)
 - [Implementations and variants](#implementations-and-variants)
@@ -87,11 +87,11 @@
 - extendible
   - many programs and tools work with markdown
 
-## Hands-on Live demo
+## Hands-on live demo
 
 Let's try it out with a few examples.
 
--> [Hands-on tutorial](./hands_on.md) <-
+-> [Hands-on tutorial](./markdown_handsOn.md) <-
 
 > Note: This is also to highlight cross-document linking.
 

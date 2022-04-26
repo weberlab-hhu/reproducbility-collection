@@ -114,4 +114,4 @@ Violets are blue.
 - Reference-style:
 ![alt text][id]
 
-[id]: https://github.com/weberlab-hhu/version-control-intro/blob/main/images/clone_github.png "This one is also from 4 weeks ago"
+[id]: https://raw.githubusercontent.com/weberlab-hhu/version-control-intro/main/images/clone_github.png "This one is linked via URL"

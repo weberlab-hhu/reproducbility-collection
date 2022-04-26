@@ -18,7 +18,8 @@
   - Other markup languages: HyperText Markup Language (HTML), Extensible Markup Language (XML), LaTeX
 - WYSIWYG: "What You See Is What You Get
   - You literally write out, what you want the text to look like
-- Official website: <https://daringfireball.net/projects/markdown/>
+- File extensions: `.md` or `.markdown`
+- Official markdown website: <https://daringfireball.net/projects/markdown/>
 
 > Note: No worries, this is not about learning HTML. The following is just an example to show the meaning of markup.
 

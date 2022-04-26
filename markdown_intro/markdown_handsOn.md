@@ -108,10 +108,4 @@ Violets are blue.
 
 ### Images
 
-- Inline (titles are optional):
 ![alt text](../images/github_new.png "This picture is from the git tutorial 4 weeks ago")
-
-- Reference-style:
-![alt text][id]
-
-[id]: https://raw.githubusercontent.com/weberlab-hhu/version-control-intro/main/images/clone_github.png "This one is linked via URL"

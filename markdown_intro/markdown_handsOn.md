@@ -15,8 +15,10 @@ Try writing a markdown document, using either
 
 ### Phrase Emphasis
 
-*italic*   **bold**
-*italic*   **bold**
+*This is italic*   
+_This is also italic_   
+**This is bold**  
+__This is also bold__ 
 
 ### Headers
 
@@ -26,28 +28,33 @@ Try writing a markdown document, using either
 
 ###### Header 6
 
+---- 
+
 ### Lists
 
-- Ordered, without paragraphs:
+#### Ordered, without paragraphs:
 
-1. Foo
-2. Bar
+1. Item 1 
+2. Item 2
+4. Item 3
 
-Unordered, with paragraphs:
+
+> Note the "4." in md
+
+#### Unordered, with paragraphs:
 
 - A list item.
-
-    With multiple paragraphs.
-
 - Bar
 You can nest them:
 - Abacus
-  - answer
-- Bubbles
+  * answer
+  * Bubbles
     1. bunk
     2. bupkis
-        - BELITTLER
+      - BELITTLER
     3. burper
+
+> Note: indentation matters
 
 ### Blockquotes
 
@@ -63,19 +70,15 @@ You can nest them:
 
 ### Code Spans
 
-- `<code>` spans are delimited
-by backticks.
+- `<code>` spans are delimited by backticks.
 
-- You can include literal backticks
-like `` `this` ``.
+- You can include literal backticks like `` `this` ``.
 
-- Preformatted Code Blocks
+### Code Blocks
 
-Indent every line of a code block by at least 4 spaces or 1 tab.
-This is a normal paragraph.
-
-    This is a preformatted
-    code block.
+```
+This is a code block
+```
 
 ### Horizontal Rules
 

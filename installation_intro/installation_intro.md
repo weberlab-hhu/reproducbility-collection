@@ -123,7 +123,7 @@ manager, there's generally instructions.
 
 Package managers largely default to using root rights.
 
-e.g. `sudo install lolcat`
+e.g. `sudo apt install lolcat`
 
 This is so they can copy the files into locations like '/usr/local/bin'
 that are in everyone's $PATH, and that are not writable by
@@ -131,7 +131,7 @@ normal users. This is of course also very important from a security
 standpoint, so you can never install code for _other users_ unless
 you're intentionally using `sudo` or logged in as root!
 
-However, many allow you to make a local installation 
+However, many package managers allow you to make a local installation 
 without root rights, where
 the package is installed, but only for you (same idea
 as adding it to a path available to just _your_ $PATH variable)
@@ -180,7 +180,7 @@ When active, install things just in this virtual environment
 as always (e.g. while running R, enter `install.packages("viridis")`)
 
 If you want to record what is installed for prosperity or sharing
-`renv::snapshot()`. Then include that 'renv.lock' file in your repository
+`renv::snapshot()`. Then include that 'renv.lock' file in your git repository
 or ARC!
 
 ### Python: virtualenv
@@ -200,9 +200,13 @@ Can be installed with `sudo apt install virtualenv`, or
 
 Create a virtual environment `virtualenv <environment_name>`.
 This will create the directory `<environment_name>`.
-Classically, you do this from your project folder `virtualenv venv`.
+Classically, you do this from your project folder / in the parental
+directory of your git repository, or in the case of ARCs I believe
+it goes under 'workflows' and then name the environment 'venv' 
+via running `virtualenv venv`.
 
 Activate or 'turn on' a virtual environment: `source <enrironment_name>`
+(or `source <path/to/environment_name>` if you're now in a different directory)
 
 Installation in the active environment works the same as always for
 python e.g. `pip install numpy`.
@@ -224,6 +228,7 @@ R, or just get some binaries, or whatever).
 > As an aside, it is not always great to have multiple package managers working
 > in a domain, they don't necessarily "play well with friends" 
 > and `conda` overlaps with, well, basically everything.
+> Also conda packages aren't necessarily open source.
 > So take it with a grain of salt, but I recommend deactivating
 > their base environment by default.
 
@@ -233,8 +238,8 @@ https://docs.anaconda.com/anaconda/install/
 
 https://conda.io/projects/conda/en/latest/user-guide/install/index.html
 
-(I then add `conda deactivate` to the end of my $HOME/.bashrc file,
-so it's not 'on' until I want it to be)
+> I then add `conda deactivate` to the end of my $HOME/.bashrc file,
+> so it's not 'on' until I want it to be
 
 Create a virtual environment `conda create --name <environment_name>`
 
@@ -271,8 +276,8 @@ https://pythonspeed.com/articles/conda-vs-pip/
 > install something else you don't yet have
 > (e.g. `install.packages("ggplot2")`), and load (`library(ggplot2)`)
 > 
-> Close R, go to any other directory (so your project doesn't load) and restart R
-> try to load your package see that it was only installed in that virtual environment, 
+> Close R, go to any other directory (so your project/environment doesn't load) and restart R
+> try to load your package see that it was only installed in that one virtual environment, 
 > not everywhere `library(ggplot2)`
 ---
 
@@ -294,8 +299,8 @@ deadline is Monday.
 Beyond virtual environments, you can get even more isolation
 between installs, data, and processes by escalating to containers
 (Docker being the big one and Singularity being important
-in bioinformatics as it doesn't need `sudo` rights at run time), or even to 
-full virtual machines. 
+in bioinformatics as it doesn't need `sudo` rights at run time,
+i.e. can run on the HPC), or even to full virtual machines. 
 
 Look them up when you need it.
 

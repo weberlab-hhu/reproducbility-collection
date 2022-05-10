@@ -311,7 +311,7 @@ Last, but certainly not least:
 
 
 ---
-> Interactive: let's things install together
+> Interactive: let's install things together
 > 
 > send a link for anything you've been having trouble getting installed
 > and together we will 1) talk about the best way to install it,

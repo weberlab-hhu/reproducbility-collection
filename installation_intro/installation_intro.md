@@ -60,7 +60,6 @@ simply be ran by typing it into the terminal `<command>`.
 For more info: https://linuxize.com/post/how-to-add-directory-to-path-in-linux/
 
 ---
-
 > Interactive: A manual, non-sudo user install of a simple script.
 > 
 > Create a script (or take one you already have). For instance,
@@ -80,9 +79,8 @@ For more info: https://linuxize.com/post/how-to-add-directory-to-path-in-linux/
 > e.g. `mkdir $HOME/bin` and then `export PATH=$HOME/bin:$PATH`.
 > 
 > Copy your script into your local installation directory.
-
-Test that you can now run the script without providing a path `test.py`
-
+>
+> Test that you can now run the script without providing a path `test.py`
 ---
 
 ### Managing Dependencies
@@ -313,7 +311,7 @@ Last, but certainly not least:
 
 
 ---
-> Interactive: let's install together
+> Interactive: let's things install together
 > 
 > send a link for anything you've been having trouble getting installed
 > and together we will 1) talk about the best way to install it,

@@ -183,6 +183,13 @@ If you want to record what is installed for prosperity or sharing
 `renv::snapshot()`. Then include that 'renv.lock' file in your git repository
 or ARC!
 
+> Note that renv by default only snapshots dependencies that you _use_.
+> That is, you have some R file in the same directory tree 
+> that contains `library(<package>)`. If instead you want it to record
+> everthing, then run `renv::settings$snapshot.type("all")`.
+> More info at: https://rstudio.github.io/renv/articles/faq.html
+
+
 ### Python: virtualenv
 There are _many_ alternatives for making virtual environments
 in python. I like the simplicity of `python3-venv` or `virtualenv`,
@@ -205,8 +212,8 @@ directory of your git repository, or in the case of ARCs I believe
 it goes under 'workflows' and then name the environment 'venv' 
 via running `virtualenv venv`.
 
-Activate or 'turn on' a virtual environment: `source <enrironment_name>`
-(or `source <path/to/environment_name>` if you're now in a different directory)
+Activate or 'turn on' a virtual environment: `source <enrironment_name>/bin/activate`
+(or `source <path/to/environment_name>/bin/activate` if you're now in a different directory)
 
 Installation in the active environment works the same as always for
 python e.g. `pip install numpy`.
